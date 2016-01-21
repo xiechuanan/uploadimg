@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>选择图片</title>
+	<link rel="stylesheet" href="">
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+    <script src="plugin/layer/layer.js"></script>
+    <script src="plugin/layer/extend/layer.ext.js"></script>
+	<style type="text/css">
+		.pic{
+			margin-top: 10px;
+		}
+		body{
+			width: 100px;
+			margin:0px auto;
+		}
+
+
+
+
+		
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.selectImg').click(function(){
+				var id_val = $(this).attr('id');
+				layer.open({
+		            type: 2,
+		            title: '选择图片',
+		            area: ['700px', '530px'],
+		            fix: false, //不固定
+		            maxmin: true,
+		            content: './select.html?id_val='+id_val+'&aspectRatio=1'
+		        });
+			});
+		});
+	</script>
+</head>
+<body>
+    <div class="pic">
+    <input type="button" class="selectImg" id="selectImg1" value="图片1">
+    <input type="text" value="" id="pic" name="pic">
+    </div>
+
+    <div class="pic">
+    <input type="button" class="selectImg" id="selectImg2" value="图片2">
+    <input type="text" value="" id="pic" name="pic">
+    </div>
+</body>
+</html>
