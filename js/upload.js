@@ -20,7 +20,6 @@ function getUrlParams(name, many, decode) {
 $(document).ready(function() {
     var id_val      = getUrlParams('id_val');
     var aspectRatio = getUrlParams('aspectRatio');
-    alert(aspectRatio);
     switch(aspectRatio)
     {
         case '1':
